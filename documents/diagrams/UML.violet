@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="10.0.2" class="java.beans.XMLDecoder">
+ <object class="com.horstmann.violet.ClassDiagramGraph">
+  <void method="addNode">
+   <object class="com.horstmann.violet.ClassNode" id="ClassNode0">
+    <void property="attributes">
+     <void property="text">
+      <string>private Model model
+private View view
+private int windowWidth
+private int windowHeight
+private EventHandler&lt;KeyEvent&gt; evKeyPress
+private KeyCode kcKeyPress
+private EventHandler&lt;KeyEvent&gt; evKeyRelease
+private KeyCode kcKeyRelease
+private EventHandler&lt;MouseEvent&gt; evMouse
+private double dMouseX
+private double DMouseY
+private int iSleepTimer</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>static void main(String[] args) 
+void start(Stage primaryStage) throws Exception</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>Controller</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double0">
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>x</string>
+     <void method="set">
+      <object idref="Point2D$Double0"/>
+      <double>690.0</double>
+     </void>
+    </void>
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>y</string>
+     <void method="set">
+      <object idref="Point2D$Double0"/>
+      <double>50.0</double>
+     </void>
+    </void>
+    <void method="setLocation">
+     <double>690.0</double>
+     <double>50.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object class="com.horstmann.violet.ClassNode" id="ClassNode1">
+    <void property="attributes">
+     <void property="text">
+      <string>private boolean initFlag 
+private boolean bModelForceCont
+private boolean bStartingFlag
+private int iBoundWidth
+private int iBoundHeight
+private GameState eGameState
+private GameState eLastGameState
+private boolean bPlayerLost
+private ArrayList&lt;Item&gt; lstItems
+private Shark shark
+private Item netSquare
+private int iGameLength
+private int iGameProgress
+private int iAlgaeLevel
+private boolean bClamSpeechInitiated
+private boolean bGameRunning
+private ItemType eMostAbundantTrash
+private ItemType eNormalTrash 1
+private ItemType eNormalTrash2
+private ItemType eGuess
+private boolean bGame2Correct
+private int feedbackIndex
+private boolean bFeedbackAvailable
+private boolean bInOilLock
+private Random rand
+private int iAlgaeCollected
+private boolean bRemvoingTrash
+private boolean showMove
+private boolean tuturialDone
+private int tutorial3State
+private int iTrashCollected
+</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>boolean getModelForceCont()
+ArrayyList&lt;Item&gt; getlstItems()
+GameState geteGameState()
+int getiGameLength()
+int getiGameProgress()
+Shark getShark()
+int getiAlgaeLevel()
+boolean getbInitFlag()
+boolean getbGameRunning()
+void setMoveBoolean()
+void update(KeyCode kcKeyPress, KeyCode kcKeyRelease, double dMouxeX, double dMouseY)
+private void executeStartscreen(KeyCode kcKeyPress)
+void executeCutscene()
+boolean getShowMove()
+private void executeCutscene1()
+private void executeCutscene2()
+private void executeCutscene3()
+private void executeGame1(KeyCode kcKeyPress, KeyCode kcKeyRelease)
+private void executeGame2()
+private void executeGame3()
+private void executeEndscreen()
+</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>Model</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double1">
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>x</string>
+     <void method="set">
+      <object idref="Point2D$Double1"/>
+      <double>20.0</double>
+     </void>
+    </void>
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>y</string>
+     <void method="set">
+      <object idref="Point2D$Double1"/>
+      <double>50.0</double>
+     </void>
+    </void>
+    <void method="setLocation">
+     <double>20.0</double>
+     <double>50.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object class="com.horstmann.violet.ClassNode" id="ClassNode2">
+    <void property="attributes">
+     <void property="text">
+      <string>private boolean bInitFlag
+private boolean bViewForceCont
+private boolean bScrollBackground
+private Canvas canvas, decCanvas, sharkCanvas
+private Group root
+private Scene scene
+private GraphicsContext dgc, gc, sgc
+private int iBoundWidth
+private int iBoundHeight
+private Media media
+private MediaPlayer player
+private MediaView viewer; 
+private DoubleProperty width
+private DoubleProperty height
+private Image imgStartscreen
+private Image imgBackground1
+private Image imgBackground2
+private Image imgShark, imgFish, imgRay
+private Image imgPlastic, imgAlgae
+private Image imgStartSign, imgEndSign
+private Image imgClamSpeech
+private Image imgRock1, imgRock2, imgRock3
+private Image imgSeaweed1, imgSeaweed2, imgSeaweed3
+private Image imgGlass, imgMetal, imgPlastic
+private Image imgBoat
+private Image imgQuestion
+private Image imgNetTypes
+private Image imgNetSelect
+private Image imgYouDied
+private Image imgTutGood, imgTutBad, imgTutMove
+private Image imgArrowDown, imgArrowUp
+private Image imgArrow
+private Image imgTitle
+private Image imgPressEnter
+private Image imgBubble
+private Image imgLeftClick
+private Image imgThumbsUp, imgHQ
+private Image imgYouWin
+private File fCutscene1, fCutscene2, fCutscene3, dCutscene4
+private Stage s
+private int backgroundIndex
+private Rotate sharkImgRotate
+private boolean game2Guessed
+private ItemType game2Guess
+private Button choice1, choice2, choice3
+private boolean game2Correct
+private boolean game2ModelResponse
+private Image imgCorrect, imgIncorrect
+private ItemType game2CorrectAnswer
+private Media currCutscene
+private GameState eGameState
+private boolean showMove
+private double moveOpa
+private int tutorialFlashIdx
+private boolean showTutorialText
+private int tutorial3State
+private ClamSpeech clamSpeech</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>void update()
+boolean getbViewForceCont()
+Scene getScene()
+int getiBoundWidth()
+int getiboundHeight()
+boolen getbGuessed()
+ItemType getGame2Guess()
+private Image createImage()
+private void displayStartscreen()
+private void displayCutscene()
+void setShowMove()
+private void displayTutorial1()
+void setGame2ModelResponse()
+private void displayGame1()
+private void displayGame2()
+private void displayTutorial3State()
+private void displayGame3()
+private void displayGameOver()
+private void displayEndScreen()
+private void cleanupGameState()
+private Image[] getClamImages()
+private void setupGameState()
+private void playMedia()
+private void setupdecCanvas()
+private void setupsharkCanvas()
+private void drawbackgroundScroll()
+private void drawBackgroundCrop()
+private void drawAllItems()
+private void drawAlgaeShadow()
+private void drawProgressBar()
+private void drawAllItemsGame3()
+</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>View
+</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double2">
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>x</string>
+     <void method="set">
+      <object idref="Point2D$Double2"/>
+      <double>1130.0</double>
+     </void>
+    </void>
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>y</string>
+     <void method="set">
+      <object idref="Point2D$Double2"/>
+      <double>20.0</double>
+     </void>
+    </void>
+    <void method="setLocation">
+     <double>1130.0</double>
+     <double>20.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object class="com.horstmann.violet.ClassNode" id="ClassNode3">
+    <void property="attributes">
+     <void property="text">
+      <string>int iLocX
+int iLocY
+ItemType eItemType
+int curStep</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>public void move()
+int getiLocX()
+int getiLocY()
+void setiLocX()
+void setiLocY()
+int getiHealthChange()
+ItemType geteItemType()
+boolean getbIsDecoration()
+int getiWidth()
+int getiHeight()
+void setiIncrX()
+void setiIncrY()
+void move()
+void updateiLocY()
+String toString()
+
+</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>Item</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double3">
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>x</string>
+     <void method="set">
+      <object idref="Point2D$Double3"/>
+      <double>760.0</double>
+     </void>
+    </void>
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>y</string>
+     <void method="set">
+      <object idref="Point2D$Double3"/>
+      <double>350.0</double>
+     </void>
+    </void>
+    <void method="setLocation">
+     <double>760.0</double>
+     <double>350.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object class="com.horstmann.violet.ClassNode" id="ClassNode4">
+    <void property="attributes">
+     <void property="text">
+      <string>private int iMaxHealth 
+private int iHealth
+private boolean bMoveUp 
+private boolean bMoveDown
+private boolean bMoveLeft
+private boolean bMoveRight
+private boolean bDirection
+private int iRotInd
+private int iDirTimeoutInd
+private boolean bFlashing
+private int iFlashingIndex
+private boolean bFlashState
+private boolean bFlashIndefinitely</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>void move() // overloaded
+int getiMaxHealth()
+int getiHealth()
+void set iHealth()
+boolean getbFlashing()
+void setMoveBools()
+void setiHealth()
+void startFlashing()
+boolean incFlashingIndex()
+boolean getFlashState
+void setMoveBool
+void move() // overloaded
+</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>Shark</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double4">
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>x</string>
+     <void method="set">
+      <object idref="Point2D$Double4"/>
+      <double>900.0</double>
+     </void>
+    </void>
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>y</string>
+     <void method="set">
+      <object idref="Point2D$Double4"/>
+      <double>730.0</double>
+     </void>
+    </void>
+    <void method="setLocation">
+     <double>900.0</double>
+     <double>730.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object class="com.horstmann.violet.ClassNode" id="ClassNode5">
+    <void property="attributes">
+     <void property="text">
+      <string>// 20 ItemTypes
+private int iIncrX
+private int iIncrY
+private int iHealthChange
+private iWidth
+private iHeight
+private boolean bIsDecoration
+private boolean bIsTrash
+
+</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>//6 overloaded constructors
+int getiWidth()
+int getiHeight()
+int getiIncrX()
+int getiIncrY()
+int getiHealthChange()
+boolean getbIsTrash()
+boolean getbIsDecoration()
+void setiIncrX()
+void setiIncrY()</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>Enum ItemType</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double5">
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>x</string>
+     <void method="set">
+      <object idref="Point2D$Double5"/>
+      <double>940.0</double>
+     </void>
+    </void>
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>y</string>
+     <void method="set">
+      <object idref="Point2D$Double5"/>
+      <double>300.0</double>
+     </void>
+    </void>
+    <void method="setLocation">
+     <double>940.0</double>
+     <double>300.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object class="com.horstmann.violet.NoteNode" id="NoteNode0">
+    <void id="Rectangle2D$Double0" property="bounds">
+     <void class="java.awt.geom.Rectangle2D$Double" method="getField">
+      <string>x</string>
+      <void method="set">
+       <object idref="Rectangle2D$Double0"/>
+       <double>560.0</double>
+      </void>
+     </void>
+     <void class="java.awt.geom.Rectangle2D$Double" method="getField">
+      <string>width</string>
+      <void method="set">
+       <object idref="Rectangle2D$Double0"/>
+       <double>380.0</double>
+      </void>
+     </void>
+    </void>
+    <void property="bounds">
+     <object idref="Rectangle2D$Double0"/>
+    </void>
+    <void property="color">
+     <object class="java.awt.Color">
+      <int>255</int>
+      <int>215</int>
+      <int>0</int>
+      <int>255</int>
+     </object>
+    </void>
+    <void property="text">
+     <void property="text">
+      <string>For simplicity, all access modifiers that are not specified are public</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double6">
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>x</string>
+     <void method="set">
+      <object idref="Point2D$Double6"/>
+      <double>560.0</double>
+     </void>
+    </void>
+    <void method="setLocation">
+     <double>560.0</double>
+     <double>0.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object class="com.horstmann.violet.ClassNode" id="ClassNode6">
+    <void property="attributes">
+     <void property="text">
+      <string>// 12 GameStates</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>Enum GameState</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double7">
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>x</string>
+     <void method="set">
+      <object idref="Point2D$Double7"/>
+      <double>490.0</double>
+     </void>
+    </void>
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>y</string>
+     <void method="set">
+      <object idref="Point2D$Double7"/>
+      <double>940.0</double>
+     </void>
+    </void>
+    <void method="setLocation">
+     <double>490.0</double>
+     <double>940.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="addNode">
+   <object class="com.horstmann.violet.ClassNode" id="ClassNode7">
+    <void property="attributes">
+     <void property="text">
+      <string>boolean bDismissed
+boolean bTransitionDone
+int iCurrTextInd</string>
+     </void>
+    </void>
+    <void property="methods">
+     <void property="text">
+      <string>boolean getbDismissed()
+boolean getbTransitionDone()
+void move()</string>
+     </void>
+    </void>
+    <void property="name">
+     <void property="text">
+      <string>ClamSpeech</string>
+     </void>
+    </void>
+   </object>
+   <object class="java.awt.geom.Point2D$Double" id="Point2D$Double8">
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>x</string>
+     <void method="set">
+      <object idref="Point2D$Double8"/>
+      <double>600.0</double>
+     </void>
+    </void>
+    <void class="java.awt.geom.Point2D$Double" method="getField">
+     <string>y</string>
+     <void method="set">
+      <object idref="Point2D$Double8"/>
+      <double>750.0</double>
+     </void>
+    </void>
+    <void method="setLocation">
+     <double>600.0</double>
+     <double>750.0</double>
+    </void>
+   </object>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.ClassRelationshipEdge">
+    <void property="bentStyle">
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/>
+    </void>
+    <void property="endArrowHead">
+     <object class="com.horstmann.violet.ArrowHead" field="V"/>
+    </void>
+   </object>
+   <object idref="ClassNode1"/>
+   <object idref="ClassNode0"/>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.ClassRelationshipEdge">
+    <void property="bentStyle">
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/>
+    </void>
+    <void property="endArrowHead">
+     <object class="com.horstmann.violet.ArrowHead" field="V"/>
+    </void>
+   </object>
+   <object idref="ClassNode2"/>
+   <object idref="ClassNode0"/>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.ClassRelationshipEdge">
+    <void property="bentStyle">
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/>
+    </void>
+    <void property="endArrowHead">
+     <object class="com.horstmann.violet.ArrowHead" field="V"/>
+    </void>
+   </object>
+   <object idref="ClassNode3"/>
+   <object idref="ClassNode1"/>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.ClassRelationshipEdge">
+    <void property="bentStyle">
+     <object class="com.horstmann.violet.BentStyle" field="VHV"/>
+    </void>
+    <void property="endArrowHead">
+     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/>
+    </void>
+   </object>
+   <object idref="ClassNode4"/>
+   <object idref="ClassNode3"/>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.ClassRelationshipEdge">
+    <void property="bentStyle">
+     <object class="com.horstmann.violet.BentStyle" field="HVH"/>
+    </void>
+    <void property="endArrowHead">
+     <object class="com.horstmann.violet.ArrowHead" field="V"/>
+    </void>
+   </object>
+   <object idref="ClassNode5"/>
+   <object idref="ClassNode3"/>
+  </void>
+  <void method="connect">
+   <object class="com.horstmann.violet.ClassRelationshipEdge">
+    <void property="bentStyle">
+     <object class="com.horstmann.violet.BentStyle" field="VHV"/>
+    </void>
+    <void property="endArrowHead">
+     <object class="com.horstmann.violet.ArrowHead" field="TRIANGLE"/>
+    </void>
+   </object>
+   <object idref="ClassNode7"/>
+   <object idref="ClassNode3"/>
+  </void>
+ </object>
+</java>
